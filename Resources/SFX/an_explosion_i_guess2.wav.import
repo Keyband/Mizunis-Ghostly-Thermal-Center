@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/an_explosion_i_guess2.wav-d53911e70d82d7bf43b4f8d39bc0e960.sample"
+
+[deps]
+
+source_file="res://Resources/SFX/an_explosion_i_guess2.wav"
+source_md5="bc0135dbaa8ffa0daa165627689ebc05"
+
+dest_files=[ "res://.import/an_explosion_i_guess2.wav-d53911e70d82d7bf43b4f8d39bc0e960.sample" ]
+dest_md5="c95d6ae21ee3ba872da836b5c86636c0"
+
+[params]
+
+force/8_bit=true
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

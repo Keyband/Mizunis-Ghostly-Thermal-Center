@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/ofuro/ofuro.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/ofuro/ofuro.gd" type="Script" id=2]
+
+[node name="baths" type="Node2D"]
+
+[node name="1" type="Area2D" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 385, 79 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="2" type="Area2D" parent="." index="1" instance=ExtResource( 1 )]
+
+position = Vector2( 385, 266 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="4" type="Area2D" parent="." index="2" instance=ExtResource( 1 )]
+
+position = Vector2( 106, 266 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[connection signal="area_entered" from="1" to="1" method="_on_ofuro_area_entered"]
+
+[connection signal="area_entered" from="2" to="2" method="_on_ofuro_area_entered"]
+
+[connection signal="area_entered" from="4" to="4" method="_on_ofuro_area_entered"]
+
+

@@ -1,0 +1,88 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/room/room.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Textures/portasclientes.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/ofuro/ofuro.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 17 )
+
+[sub_resource type="Curve2D" id=2]
+
+bake_interval = 5.0
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 73, 0 )
+}
+
+[node name="room" type="Area2D"]
+
+position = Vector2( 32, 75 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="pos_request" type="Position2D" parent="." index="0"]
+
+position = Vector2( 0, -30 )
+
+[node name="pos_satisfaction" type="Position2D" parent="." index="1"]
+
+position = Vector2( 74, -46 )
+
+[node name="sprite" type="Sprite" parent="." index="2"]
+
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="." index="3"]
+
+position = Vector2( 1, 2 )
+shape = SubResource( 1 )
+
+[node name="tmr_next" type="Timer" parent="." index="4"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+[node name="tmr_still" type="Timer" parent="." index="5"]
+
+process_mode = 1
+wait_time = 5.0
+one_shot = true
+autostart = false
+
+[node name="path_2d" type="Path2D" parent="." index="6"]
+
+position = Vector2( 0, -11 )
+curve = SubResource( 2 )
+
+[node name="path_follow_2d" type="PathFollow2D" parent="path_2d" index="0"]
+
+position = Vector2( 1, 0 )
+offset = 0.0
+h_offset = 0.0
+v_offset = 0.0
+rotate = false
+cubic_interp = true
+loop = false
+lookahead = 4.0
+
+[node name="ofuro" parent="." index="7" instance=ExtResource( 3 )]
+
+position = Vector2( 74, 4 )
+
+[connection signal="timeout" from="tmr_next" to="." method="_on_tmr_next_timeout"]
+
+[connection signal="timeout" from="tmr_still" to="." method="_on_tmr_still_timeout"]
+
+

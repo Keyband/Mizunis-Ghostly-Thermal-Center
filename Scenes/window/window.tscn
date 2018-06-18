@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/window/window.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Textures/Janelas_42x37.png" type="Texture" id=2]
+
+[node name="window" type="Node2D"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="mid" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+hframes = 3
+_sections_unfolded = [ "Animation", "Visibility" ]
+
+[node name="hot" type="Sprite" parent="." index="1"]
+
+texture = ExtResource( 2 )
+hframes = 3
+frame = 2
+_sections_unfolded = [ "Animation", "Visibility" ]
+
+[node name="cold" type="Sprite" parent="." index="2"]
+
+texture = ExtResource( 2 )
+hframes = 3
+frame = 1
+_sections_unfolded = [ "Animation", "Visibility" ]
+
+

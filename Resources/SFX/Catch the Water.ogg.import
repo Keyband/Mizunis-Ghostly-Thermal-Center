@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Catch the Water.ogg-510e5aad8b952e5fc00ea52af2db2bc8.oggstr"
+
+[deps]
+
+source_file="res://Resources/SFX/Catch the Water.ogg"
+source_md5="dea8275869fb40c1e0872ace9d8c1e9f"
+
+dest_files=[ "res://.import/Catch the Water.ogg-510e5aad8b952e5fc00ea52af2db2bc8.oggstr" ]
+dest_md5="968852ff3126b6035b64bc79114cffb6"
+
+[params]
+
+loop=true
+loop_offset=0

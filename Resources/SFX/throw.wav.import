@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/throw.wav-3d2fcb50a4e4b9407f374acf227262a4.sample"
+
+[deps]
+
+source_file="res://Resources/SFX/throw.wav"
+source_md5="47a085617e42ea450931bdd2b7b0f8ab"
+
+dest_files=[ "res://.import/throw.wav-3d2fcb50a4e4b9407f374acf227262a4.sample" ]
+dest_md5="db06adb81873a1798edc8e7947f4e3bb"
+
+[params]
+
+force/8_bit=true
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

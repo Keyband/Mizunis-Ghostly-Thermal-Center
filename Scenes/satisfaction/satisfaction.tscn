@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/satisfaction/satisfaction.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Textures/BalaoCliente_32x26.png" type="Texture" id=2]
+
+[node name="satisfaction" type="Node2D"]
+
+z_index = 100
+script = ExtResource( 1 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="twn" type="Tween" parent="." index="0"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[node name="sprite" type="Sprite" parent="." index="1"]
+
+texture = ExtResource( 2 )
+hframes = 2
+_sections_unfolded = [ "Animation" ]
+
+[node name="tmr_free" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 5.0
+one_shot = false
+autostart = true
+
+[connection signal="timeout" from="tmr_free" to="." method="_on_tmr_free_timeout"]
+
+

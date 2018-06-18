@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="OccluderPolygon2D" id=9]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( 198, 64, 199, 9, 301, 9, 301, 64, 310, 64, 310, 9, 490, 9, 490, 94, 270, 94, 270, 103, 490, 103, 490, 182, 271, 182, 271, 191, 301, 191, 301, 250, 310, 250, 310, 191, 490, 191, 490, 281, 9, 281, 9, 191, 189, 191, 189, 250, 198, 250, 198, 191, 228, 191, 228, 182, 9, 183, 9, 103, 228, 103, 228, 94, 9, 94, 9, 9, 189, 9, 189, 64 )
+
+[node name="light_occluder_2d" type="LightOccluder2D"]
+
+occluder = SubResource( 9 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+
