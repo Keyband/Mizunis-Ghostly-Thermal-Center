@@ -19,7 +19,8 @@ func _ready():
 	set_physics_process(true)
 	
 func _physics_process(delta):
-
+	if Input.is_action_just_pressed('ui_debug'): global.reputation -= 50
+	
 	remove_collision_exception_with(global.platforms)
 	if animacao != $animation_player.current_animation: $animation_player.play(animacao)
 	if is_on_floor(): animacao = 'idle' if abs(vetor_velocidade.x) < 0.5 else 'walking'

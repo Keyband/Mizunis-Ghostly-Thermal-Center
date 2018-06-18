@@ -19,6 +19,8 @@ func _process(delta):
 		global.score = 0
 		global.reputation = 100
 		global.climate_manager.temperature_index = 1
+		global.set_process(true)
+		get_tree().paused = false
 		get_tree().change_scene(\"res://Scenes/main_retry.tscn\")
 "
 
@@ -61,7 +63,7 @@ script/source = "extends Label
 
 func _ready(): self.text = 'You managed to make ' + str(global.score) + ' customers satisfied. However, can you do better?'"
 
-[node name="gameover" type="Node2D"]
+[node name="gameover" type="Node2D" index="0"]
 
 pause_mode = 2
 script = SubResource( 1 )
