@@ -7,16 +7,14 @@ path="res://.import/portasclientes.png-9007d15aa43b66478801de6e4f995e56.stex"
 [deps]
 
 source_file="res://Resources/Textures/portasclientes.png"
-source_md5="f8b0d4d6c67e30715d9e570866151a5e"
-
 dest_files=[ "res://.import/portasclientes.png-9007d15aa43b66478801de6e4f995e56.stex" ]
-dest_md5="fba6c037e61605f9fe4122920e98bb71"
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=false
@@ -26,6 +24,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

@@ -7,10 +7,7 @@ path="res://.import/jump1.wav-bf7afe718dc26e0c917de62dbf51bfc4.sample"
 [deps]
 
 source_file="res://Resources/SFX/jump1.wav"
-source_md5="dd6c1ec279c4b016f82c0daecf0ffbc8"
-
 dest_files=[ "res://.import/jump1.wav-bf7afe718dc26e0c917de62dbf51bfc4.sample" ]
-dest_md5="d742d17f3bc5fb7719f4d0c90a0f461a"
 
 [params]
 

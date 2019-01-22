@@ -7,16 +7,14 @@ path="res://.import/Menu2.png-3873631f8dfc969f7b64616151964e16.stex"
 [deps]
 
 source_file="res://Resources/Textures/Menu2.png"
-source_md5="1d44f3382c8e267f0a81bd49345981f0"
-
 dest_files=[ "res://.import/Menu2.png-3873631f8dfc969f7b64616151964e16.stex" ]
-dest_md5="0846f525fede4f561e06274e4edf1252"
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
@@ -26,6 +24,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

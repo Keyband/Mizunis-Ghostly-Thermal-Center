@@ -7,16 +7,14 @@ path="res://.import/Seta.png-062dd49e8591aef9fba8590dc1203298.stex"
 [deps]
 
 source_file="res://Resources/Textures/Seta.png"
-source_md5="0a515381023c7881eccabc0a2b9debc6"
-
 dest_files=[ "res://.import/Seta.png-062dd49e8591aef9fba8590dc1203298.stex" ]
-dest_md5="35b00d591bd1e10c2ffe4d30a5f7fd2f"
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=false
@@ -26,6 +24,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

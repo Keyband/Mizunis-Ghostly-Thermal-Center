@@ -25,22 +25,18 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 
-custom_solver_bias = 0.0
 extents = Vector2( 5, 145 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
-custom_solver_bias = 0.0
 extents = Vector2( 250, 5 )
 
 [sub_resource type="RectangleShape2D" id=3]
 
-custom_solver_bias = 0.0
 extents = Vector2( 5, 34 )
 
 [sub_resource type="RectangleShape2D" id=4]
 
-custom_solver_bias = 0.0
 extents = Vector2( 115, 5 )
 
 [sub_resource type="GDScript" id=5]
@@ -50,7 +46,6 @@ func _ready(): global.platforms = self"
 
 [sub_resource type="RectangleShape2D" id=6]
 
-custom_solver_bias = 0.0
 extents = Vector2( 23.5282, 4.49941 )
 
 [sub_resource type="GDScript" id=7]
@@ -147,11 +142,9 @@ func _on_tmr_still_timeout():
 	current_ghost.get_node('sprite').flip_h = true
 	move_to_exit = true
 "
-_sections_unfolded = [ "Resource" ]
 
 [sub_resource type="Curve2D" id=8]
 
-bake_interval = 5.0
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 73, 0, 0, 0, 0, 0, 0, 0 )
 }
@@ -159,8 +152,6 @@ _data = {
 [sub_resource type="Animation" id=9]
 
 length = 0.5
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("sprites/mizuni:frame")
 tracks/0/interp = 1
@@ -177,8 +168,6 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=10]
 
 length = 0.5
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("sprites/mizuni:frame")
 tracks/0/interp = 1
@@ -194,9 +183,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=11]
 
-length = 1.0
 loop = true
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("sprites/mizuni:frame")
 tracks/0/interp = 1
@@ -214,7 +201,6 @@ tracks/0/keys = {
 
 length = 0.5
 loop = true
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("sprites/mizuni:frame")
 tracks/0/interp = 1
@@ -230,12 +216,10 @@ tracks/0/keys = {
 
 [sub_resource type="RectangleShape2D" id=13]
 
-custom_solver_bias = 0.0
 extents = Vector2( 11.6667, 9.94706 )
 
 [sub_resource type="RectangleShape2D" id=14]
 
-custom_solver_bias = 0.0
 extents = Vector2( 5, 14 )
 
 [sub_resource type="GDScript" id=15]
@@ -281,7 +265,6 @@ func _process(delta):
 
 [sub_resource type="Curve2D" id=18]
 
-bake_interval = 5.0
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 488.531, 302.097, 0, 0, 0, 0, 406.428, 302.097 )
 }
@@ -324,698 +307,390 @@ func _on_tmr_blink_timeout(): self.visible = not self.visible
 "
 
 [node name="Node2D" type="Node2D"]
-
 __meta__ = {
 "_edit_horizontal_guides_": [ 251.0, 320.0, 311.097, 111.0 ],
 "_edit_vertical_guides_": [ 462.0, 389.0, 500.0, 407.428, 489.531, 197.988, 249.0 ]
 }
 
-[node name="Control" type="Control" parent="." index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Control" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-_sections_unfolded = [ "Rect" ]
 
-[node name="stage" type="Node2D" parent="Control" index="0"]
+[node name="stage" type="Node2D" parent="Control"]
 
-_sections_unfolded = [ "Collision", "Transform" ]
-
-[node name="sprite" type="Sprite" parent="Control/stage" index="0"]
-
+[node name="sprite" type="Sprite" parent="Control/stage"]
 texture = ExtResource( 1 )
 centered = false
-_sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="walls" type="StaticBody2D" parent="Control/stage" index="1"]
-
+[node name="walls" type="StaticBody2D" parent="Control/stage"]
 editor/display_folded = true
-input_pickable = false
 collision_layer = 3
 collision_mask = 3
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
 
-[node name="l" type="CollisionShape2D" parent="Control/stage/walls" index="0"]
-
+[node name="l" type="CollisionShape2D" parent="Control/stage/walls"]
 position = Vector2( 4, 145 )
 shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="r" type="CollisionShape2D" parent="Control/stage/walls" index="1"]
-
+[node name="r" type="CollisionShape2D" parent="Control/stage/walls"]
 position = Vector2( 495, 145 )
 shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="t" type="CollisionShape2D" parent="Control/stage/walls" index="2"]
-
+[node name="t" type="CollisionShape2D" parent="Control/stage/walls"]
 position = Vector2( 250, 4 )
 shape = SubResource( 2 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="d" type="CollisionShape2D" parent="Control/stage/walls" index="3"]
-
+[node name="d" type="CollisionShape2D" parent="Control/stage/walls"]
 position = Vector2( 250, 286 )
 shape = SubResource( 2 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="1" type="CollisionShape2D" parent="Control/stage/walls" index="4"]
-
+[node name="1" type="CollisionShape2D" parent="Control/stage/walls"]
 position = Vector2( 193, 30 )
 shape = SubResource( 3 )
 
-[node name="2" type="CollisionShape2D" parent="Control/stage/walls" index="5"]
-
+[node name="2" type="CollisionShape2D" parent="Control/stage/walls"]
 position = Vector2( 193, 216 )
 shape = SubResource( 3 )
 
-[node name="3" type="CollisionShape2D" parent="Control/stage/walls" index="6"]
-
+[node name="3" type="CollisionShape2D" parent="Control/stage/walls"]
 position = Vector2( 306, 216 )
 shape = SubResource( 3 )
 
-[node name="4" type="CollisionShape2D" parent="Control/stage/walls" index="7"]
-
+[node name="4" type="CollisionShape2D" parent="Control/stage/walls"]
 position = Vector2( 306, 30 )
 shape = SubResource( 3 )
 
-[node name="a1" type="CollisionShape2D" parent="Control/stage/walls" index="8"]
-
+[node name="a1" type="CollisionShape2D" parent="Control/stage/walls"]
 position = Vector2( 113, 99 )
 shape = SubResource( 4 )
 
-[node name="a2" type="CollisionShape2D" parent="Control/stage/walls" index="9"]
-
+[node name="a2" type="CollisionShape2D" parent="Control/stage/walls"]
 position = Vector2( 386, 99 )
 shape = SubResource( 4 )
 
-[node name="a3" type="CollisionShape2D" parent="Control/stage/walls" index="10"]
-
+[node name="a3" type="CollisionShape2D" parent="Control/stage/walls"]
 position = Vector2( 103, 187 )
 shape = SubResource( 4 )
 
-[node name="a4" type="CollisionShape2D" parent="Control/stage/walls" index="11"]
-
+[node name="a4" type="CollisionShape2D" parent="Control/stage/walls"]
 position = Vector2( 395, 187 )
 shape = SubResource( 4 )
 
-[node name="platforms" type="StaticBody2D" parent="Control/stage" index="2"]
-
-input_pickable = false
+[node name="platforms" type="StaticBody2D" parent="Control/stage"]
 collision_layer = 3
 collision_mask = 3
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
 script = SubResource( 5 )
 
-[node name="2" type="CollisionShape2D" parent="Control/stage/platforms" index="0"]
-
+[node name="2" type="CollisionShape2D" parent="Control/stage/platforms"]
 position = Vector2( 249.534, 144.516 )
 shape = SubResource( 6 )
 one_way_collision = true
 
-[node name="3" type="CollisionShape2D" parent="Control/stage/platforms" index="1"]
-
+[node name="3" type="CollisionShape2D" parent="Control/stage/platforms"]
 position = Vector2( 249.534, 237.549 )
 shape = SubResource( 6 )
 one_way_collision = true
 
-[node name="dispensers" type="Node2D" parent="Control/stage" index="3"]
-
+[node name="dispensers" type="Node2D" parent="Control/stage"]
 editor/display_folded = true
 
-[node name="dispenser_red" parent="Control/stage/dispensers" index="0" instance=ExtResource( 2 )]
-
+[node name="dispenser_red" parent="Control/stage/dispensers" instance=ExtResource( 2 )]
 position = Vector2( 90, 170 )
 
-[node name="spr_red" type="Sprite" parent="Control/stage/dispensers" index="1"]
-
+[node name="spr_red" type="Sprite" parent="Control/stage/dispensers"]
 position = Vector2( 128, 166 )
 texture = ExtResource( 3 )
 hframes = 2
-_sections_unfolded = [ "Animation" ]
 
-[node name="dispenser_yellow" parent="Control/stage/dispensers" index="2" instance=ExtResource( 4 )]
-
+[node name="dispenser_yellow" parent="Control/stage/dispensers" instance=ExtResource( 4 )]
 position = Vector2( 419.939, 170 )
 
-[node name="spr_yellow" type="Sprite" parent="Control/stage/dispensers" index="3"]
-
+[node name="spr_yellow" type="Sprite" parent="Control/stage/dispensers"]
 position = Vector2( 380.939, 166 )
 texture = ExtResource( 3 )
 hframes = 2
 frame = 1
-_sections_unfolded = [ "Animation", "Visibility" ]
 
-[node name="rooms" type="Node2D" parent="Control/stage" index="4"]
-
+[node name="rooms" type="Node2D" parent="Control/stage"]
 editor/display_folded = true
 
-[node name="1" parent="Control/stage/rooms" index="0" instance=ExtResource( 5 )]
+[node name="1" parent="Control/stage/rooms" instance=ExtResource( 5 )]
 
-[node name="2" parent="Control/stage/rooms" index="1" instance=ExtResource( 5 )]
-
+[node name="2" parent="Control/stage/rooms" instance=ExtResource( 5 )]
 editor/display_folded = true
 position = Vector2( 32, 262 )
 
 [node name="tmr_next" parent="Control/stage/rooms/2" index="4"]
-
 wait_time = 15.0
 
-[node name="3" parent="Control/stage/rooms" index="2" instance=ExtResource( 5 )]
-
+[node name="3" parent="Control/stage/rooms" instance=ExtResource( 5 )]
 editor/display_folded = true
 position = Vector2( 463, 262 )
 script = SubResource( 7 )
 
 [node name="sprite" parent="Control/stage/rooms/3" index="2"]
-
 flip_h = true
-_sections_unfolded = [ "Offset", "Z Index" ]
 
 [node name="collision_shape_2d" parent="Control/stage/rooms/3" index="3"]
-
 position = Vector2( 0, 2 )
 
 [node name="tmr_next" parent="Control/stage/rooms/3" index="4"]
-
 wait_time = 30.0
 
 [node name="path_2d" parent="Control/stage/rooms/3" index="6"]
-
 position = Vector2( -74, -11 )
 curve = SubResource( 8 )
 
 [node name="path_follow_2d" parent="Control/stage/rooms/3/path_2d" index="0"]
-
 position = Vector2( 73, 0 )
 
 [node name="ofuro" parent="Control/stage/rooms/3" index="7"]
-
 position = Vector2( -74, 4 )
 
-[node name="4" parent="Control/stage/rooms" index="3" instance=ExtResource( 5 )]
-
+[node name="4" parent="Control/stage/rooms" instance=ExtResource( 5 )]
 editor/display_folded = true
 position = Vector2( 463, 75 )
 script = SubResource( 7 )
 
 [node name="sprite" parent="Control/stage/rooms/4" index="2"]
-
 flip_h = true
-_sections_unfolded = [ "Offset", "Z Index" ]
 
 [node name="collision_shape_2d" parent="Control/stage/rooms/4" index="3"]
-
 position = Vector2( 0, 2 )
 
 [node name="tmr_next" parent="Control/stage/rooms/4" index="4"]
-
 wait_time = 45.0
 
 [node name="path_2d" parent="Control/stage/rooms/4" index="6"]
-
 position = Vector2( -74, -11 )
 curve = SubResource( 8 )
 
 [node name="path_follow_2d" parent="Control/stage/rooms/4/path_2d" index="0"]
-
 position = Vector2( 73, 0 )
 
 [node name="ofuro" parent="Control/stage/rooms/4" index="7"]
-
 position = Vector2( -74, 4 )
 
-[node name="windows" type="Node2D" parent="Control/stage" index="5"]
-
+[node name="windows" type="Node2D" parent="Control/stage"]
 editor/display_folded = true
 
-[node name="1" parent="Control/stage/windows" index="0" instance=ExtResource( 6 )]
-
+[node name="1" parent="Control/stage/windows" instance=ExtResource( 6 )]
 position = Vector2( 58, 129.503 )
 
-[node name="2" parent="Control/stage/windows" index="1" instance=ExtResource( 6 )]
-
+[node name="2" parent="Control/stage/windows" instance=ExtResource( 6 )]
 position = Vector2( 443, 129.608 )
 
-[node name="3" parent="Control/stage/windows" index="2" instance=ExtResource( 6 )]
-
+[node name="3" parent="Control/stage/windows" instance=ExtResource( 6 )]
 position = Vector2( 322.047, 129.542 )
 
-[node name="4" parent="Control/stage/windows" index="3" instance=ExtResource( 6 )]
-
+[node name="4" parent="Control/stage/windows" instance=ExtResource( 6 )]
 position = Vector2( 176.915, 129.439 )
 
-[node name="5" parent="Control/stage/windows" index="4" instance=ExtResource( 6 )]
-
+[node name="5" parent="Control/stage/windows" instance=ExtResource( 6 )]
 position = Vector2( 249, 30 )
 
-[node name="6" parent="Control/stage/windows" index="5" instance=ExtResource( 6 )]
-
+[node name="6" parent="Control/stage/windows" instance=ExtResource( 6 )]
 position = Vector2( 249, 213.353 )
 
-[node name="climate_manager" type="Node2D" parent="Control/stage" index="6"]
-
+[node name="climate_manager" type="Node2D" parent="Control/stage"]
 editor/display_folded = true
 script = ExtResource( 7 )
 
-[node name="tmr_change" type="Timer" parent="Control/stage/climate_manager" index="0"]
-
-process_mode = 1
+[node name="tmr_change" type="Timer" parent="Control/stage/climate_manager"]
 wait_time = 30.0
-one_shot = false
 autostart = true
 
-[node name="player" type="KinematicBody2D" parent="Control" index="1"]
-
+[node name="player" type="KinematicBody2D" parent="Control"]
 position = Vector2( 240.618, 119.078 )
 z_index = 7
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-collision/safe_margin = 0.08
 script = ExtResource( 8 )
-_sections_unfolded = [ "Z Index" ]
 
-[node name="animation_player" type="AnimationPlayer" parent="Control/player" index="0"]
-
-root_node = NodePath("..")
+[node name="animation_player" type="AnimationPlayer" parent="Control/player"]
 autoplay = "walking"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/going_down = SubResource( 9 )
 anims/going_up = SubResource( 10 )
 anims/idle = SubResource( 11 )
 anims/walking = SubResource( 12 )
-blend_times = [  ]
 
-[node name="twn_gummy" type="Tween" parent="Control/player" index="1"]
+[node name="twn_gummy" type="Tween" parent="Control/player"]
 
-repeat = false
-playback_process_mode = 1
-playback_speed = 1.0
-playback/active = false
-playback/repeat = false
-playback/speed = 1.0
-
-[node name="sounds" type="Node2D" parent="Control/player" index="2"]
-
+[node name="sounds" type="Node2D" parent="Control/player"]
 editor/display_folded = true
 
-[node name="snd_jump0" type="AudioStreamPlayer" parent="Control/player/sounds" index="0"]
-
+[node name="snd_jump0" type="AudioStreamPlayer" parent="Control/player/sounds"]
 stream = ExtResource( 9 )
-volume_db = 0.0
-autoplay = false
-mix_target = 0
 bus = "sfx"
 
-[node name="snd_jump1" type="AudioStreamPlayer" parent="Control/player/sounds" index="1"]
-
+[node name="snd_jump1" type="AudioStreamPlayer" parent="Control/player/sounds"]
 stream = ExtResource( 10 )
-volume_db = 0.0
-autoplay = false
-mix_target = 0
 bus = "sfx"
 
-[node name="snd_grab" type="AudioStreamPlayer" parent="Control/player/sounds" index="2"]
-
+[node name="snd_grab" type="AudioStreamPlayer" parent="Control/player/sounds"]
 stream = ExtResource( 11 )
-volume_db = 0.0
-autoplay = false
-mix_target = 0
 bus = "sfx"
 
-[node name="snd_throw" type="AudioStreamPlayer" parent="Control/player/sounds" index="3"]
-
+[node name="snd_throw" type="AudioStreamPlayer" parent="Control/player/sounds"]
 stream = ExtResource( 12 )
-volume_db = 0.0
-autoplay = false
-mix_target = 0
 bus = "sfx"
 
-[node name="sprites" type="Sprite" parent="Control/player" index="3"]
-
+[node name="sprites" type="Sprite" parent="Control/player"]
 editor/display_folded = true
-_sections_unfolded = [ "Offset", "Transform" ]
 
-[node name="mizuni" type="Sprite" parent="Control/player/sprites" index="0"]
-
+[node name="mizuni" type="Sprite" parent="Control/player/sprites"]
 texture = ExtResource( 13 )
 vframes = 2
 hframes = 5
-_sections_unfolded = [ "Animation", "Transform" ]
 
-[node name="range_action" type="Area2D" parent="Control/player" index="4"]
-
+[node name="range_action" type="Area2D" parent="Control/player"]
 position = Vector2( 15, 2 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-_sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/player/range_action" index="0"]
-
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/player/range_action"]
 position = Vector2( -9.618, 2.922 )
 shape = SubResource( 13 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/player" index="5"]
-
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/player"]
 position = Vector2( -1, 1 )
 shape = SubResource( 14 )
 
-[node name="pos_carry" type="Position2D" parent="Control/player" index="6"]
-
+[node name="pos_carry" type="Position2D" parent="Control/player"]
 position = Vector2( 5, 3 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="coal" parent="Control" index="2" instance=ExtResource( 14 )]
-
+[node name="coal" parent="Control" instance=ExtResource( 14 )]
 position = Vector2( 150.689, 176 )
 
-[node name="coal2" parent="Control" index="3" instance=ExtResource( 14 )]
-
+[node name="coal2" parent="Control" instance=ExtResource( 14 )]
 position = Vector2( 337.939, 176 )
 
-[node name="ice" parent="Control" index="4" instance=ExtResource( 15 )]
-
+[node name="ice" parent="Control" instance=ExtResource( 15 )]
 position = Vector2( 163, 176 )
 
-[node name="ice2" parent="Control" index="5" instance=ExtResource( 15 )]
-
+[node name="ice2" parent="Control" instance=ExtResource( 15 )]
 position = Vector2( 326.499, 176 )
 
-[node name="GUI_layer" type="CanvasLayer" parent="." index="1"]
-
-layer = 1
-offset = Vector2( 0, 0 )
-rotation = 0.0
-scale = Vector2( 1, 1 )
-transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+[node name="GUI_layer" type="CanvasLayer" parent="."]
 script = SubResource( 15 )
 
-[node name="pause" type="Control" parent="GUI_layer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="pause" type="Control" parent="GUI_layer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -290.0
 margin_bottom = -290.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 script = SubResource( 16 )
-_sections_unfolded = [ "Pause", "Rect" ]
 
-[node name="twn_pause" type="Tween" parent="GUI_layer/pause" index="0"]
+[node name="twn_pause" type="Tween" parent="GUI_layer/pause"]
 
-repeat = false
-playback_process_mode = 1
-playback_speed = 1.0
-playback/active = false
-playback/repeat = false
-playback/speed = 1.0
-
-[node name="ctn_margin" type="MarginContainer" parent="GUI_layer/pause" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="ctn_margin" type="MarginContainer" parent="GUI_layer/pause"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/margin_right = 20
 custom_constants/margin_top = 20
 custom_constants/margin_left = 20
 custom_constants/margin_bottom = 20
-_sections_unfolded = [ "custom_constants" ]
 
-[node name="ctn_panel" type="PanelContainer" parent="GUI_layer/pause/ctn_margin" index="0"]
-
+[node name="ctn_panel" type="PanelContainer" parent="GUI_layer/pause/ctn_margin"]
 self_modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 108.0
 margin_top = 112.0
 margin_right = 392.0
 margin_bottom = 208.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 custom_styles/panel = ExtResource( 16 )
-_sections_unfolded = [ "Size Flags", "Visibility", "custom_styles" ]
 
-[node name="ctn_margin" type="MarginContainer" parent="GUI_layer/pause/ctn_margin/ctn_panel" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ctn_margin" type="MarginContainer" parent="GUI_layer/pause/ctn_margin/ctn_panel"]
 margin_left = 2.0
 margin_top = 2.0
 margin_right = 282.0
 margin_bottom = 94.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/margin_right = 10
 custom_constants/margin_top = 10
 custom_constants/margin_left = 10
 custom_constants/margin_bottom = 10
-_sections_unfolded = [ "Visibility", "custom_constants" ]
 
-[node name="ctn_vbox" type="VBoxContainer" parent="GUI_layer/pause/ctn_margin/ctn_panel/ctn_margin" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ctn_vbox" type="VBoxContainer" parent="GUI_layer/pause/ctn_margin/ctn_panel/ctn_margin"]
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 270.0
 margin_bottom = 82.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
 
-[node name="str_paused" type="Label" parent="GUI_layer/pause/ctn_margin/ctn_panel/ctn_margin/ctn_vbox" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="str_paused" type="Label" parent="GUI_layer/pause/ctn_margin/ctn_panel/ctn_margin/ctn_vbox"]
 margin_right = 260.0
 margin_bottom = 72.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
 custom_fonts/font = ExtResource( 17 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
 custom_constants/shadow_as_outline = 0
 text = "Paused"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
-[node name="hud" type="Node2D" parent="GUI_layer" index="1"]
+[node name="hud" type="Node2D" parent="GUI_layer"]
 
-_sections_unfolded = [ "Transform" ]
-
-[node name="sprite" type="Sprite" parent="GUI_layer/hud" index="0"]
-
+[node name="sprite" type="Sprite" parent="GUI_layer/hud"]
 position = Vector2( 249, 304 )
 texture = ExtResource( 18 )
 
-[node name="texture_progress" type="Node2D" parent="GUI_layer/hud" index="1"]
-
+[node name="texture_progress" type="Node2D" parent="GUI_layer/hud"]
 position = Vector2( -0.508957, -0.508545 )
 script = SubResource( 17 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="bar" type="TextureProgress" parent="GUI_layer/hud/texture_progress" index="0"]
-
+[node name="bar" type="TextureProgress" parent="GUI_layer/hud/texture_progress"]
 modulate = Color( 0.968627, 0.858824, 0.32549, 1 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 70.0
 margin_top = 297.0
 margin_right = 350.0
 margin_bottom = 312.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-min_value = 0.0
-max_value = 100.0
-step = 1.0
-page = 0.0
 value = 100.0
-exp_edit = false
-rounded = false
-texture_under = null
-texture_over = null
 texture_progress = ExtResource( 19 )
-radial_fill_degrees = 360.0
-radial_center_offset = Vector2( 0, 0 )
-nine_patch_stretch = false
-_sections_unfolded = [ "Textures", "Visibility" ]
 
-[node name="path_2d" type="Path2D" parent="GUI_layer/hud" index="2"]
-
+[node name="path_2d" type="Path2D" parent="GUI_layer/hud"]
 position = Vector2( 1, 9 )
 curve = SubResource( 18 )
 script = SubResource( 19 )
 
-[node name="path_follow_2d" type="PathFollow2D" parent="GUI_layer/hud/path_2d" index="0"]
-
+[node name="path_follow_2d" type="PathFollow2D" parent="GUI_layer/hud/path_2d"]
 position = Vector2( 475.157, 302.097 )
 rotation = -3.14159
 offset = 13.3894
-h_offset = 0.0
-v_offset = 0.0
-rotate = true
-cubic_interp = true
 loop = false
-lookahead = 4.0
 
-[node name="sprite" type="Sprite" parent="GUI_layer/hud/path_2d/path_follow_2d" index="0"]
-
+[node name="sprite" type="Sprite" parent="GUI_layer/hud/path_2d/path_follow_2d"]
 scale = Vector2( 1, -1 )
 texture = ExtResource( 20 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="splash" type="Node2D" parent="GUI_layer" index="2"]
-
+[node name="splash" type="Node2D" parent="GUI_layer"]
 pause_mode = 2
 editor/display_folded = true
 visible = false
 position = Vector2( 0.5, 0 )
 scale = Vector2( 1.00125, 1 )
 script = SubResource( 20 )
-_sections_unfolded = [ "Pause", "Transform", "Visibility" ]
 
-[node name="twn" type="Tween" parent="GUI_layer/splash" index="0"]
+[node name="twn" type="Tween" parent="GUI_layer/splash"]
 
-repeat = false
-playback_process_mode = 1
-playback_speed = 1.0
-playback/active = false
-playback/repeat = false
-playback/speed = 1.0
-
-[node name="splash" type="Control" parent="GUI_layer/splash" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="splash" type="Control" parent="GUI_layer/splash"]
 margin_right = 40.0
 margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 
-[node name="1" type="TextureRect" parent="GUI_layer/splash/splash" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="1" type="TextureRect" parent="GUI_layer/splash/splash"]
 margin_right = 40.0
 margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 21 )
-stretch_mode = 0
 
-[node name="2" type="TextureRect" parent="GUI_layer/splash/splash" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="2" type="TextureRect" parent="GUI_layer/splash/splash"]
 margin_right = 40.0
 margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 22 )
-stretch_mode = 0
 script = SubResource( 21 )
 
-[node name="tmr_blink" type="Timer" parent="GUI_layer/splash/splash/2" index="0"]
-
-process_mode = 1
+[node name="tmr_blink" type="Timer" parent="GUI_layer/splash/splash/2"]
 wait_time = 0.5
-one_shot = false
 autostart = true
 
 [connection signal="timeout" from="Control/stage/climate_manager/tmr_change" to="Control/stage/climate_manager" method="_on_tmr_change_timeout"]
-
 [connection signal="tween_completed" from="GUI_layer/splash/twn" to="GUI_layer/splash" method="_on_twn_tween_completed"]
-
 [connection signal="timeout" from="GUI_layer/splash/splash/2/tmr_blink" to="GUI_layer/splash/splash/2" method="_on_tmr_blink_timeout"]
 
-
 [editable path="Control/stage/rooms/2"]
+
 [editable path="Control/stage/rooms/3"]
+
 [editable path="Control/stage/rooms/4"]

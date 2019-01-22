@@ -7,16 +7,14 @@ path="res://.import/light_gray.png-1c9c8e921f3a5f5a94ff799d27125bda.stex"
 [deps]
 
 source_file="res://Resources/Textures/placeholders/light_gray.png"
-source_md5="fd1555959c1f5ec6bc7665bc87b531dd"
-
 dest_files=[ "res://.import/light_gray.png-1c9c8e921f3a5f5a94ff799d27125bda.stex" ]
-dest_md5="326f7599aa2ee9d58ddfa2217e93505e"
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
@@ -26,6 +24,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

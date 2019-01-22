@@ -7,16 +7,14 @@ path="res://.import/PlacasErvas_23x21.png-010e1ddc937a89e6d602f0cc27a7975a.stex"
 [deps]
 
 source_file="res://Resources/Textures/PlacasErvas_23x21.png"
-source_md5="947e536dec06557b5ae7fea4bf3fd542"
-
 dest_files=[ "res://.import/PlacasErvas_23x21.png-010e1ddc937a89e6d602f0cc27a7975a.stex" ]
-dest_md5="19de99510f20b173bd0572900092f32a"
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=false
@@ -26,6 +24,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

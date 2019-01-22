@@ -7,16 +7,14 @@ path="res://.import/yellow.png-580ed304183f88e80ab20ff34d33050a.stex"
 [deps]
 
 source_file="res://Resources/Textures/placeholders/yellow.png"
-source_md5="92ac53ad53852991b25c985684311efa"
-
 dest_files=[ "res://.import/yellow.png-580ed304183f88e80ab20ff34d33050a.stex" ]
-dest_md5="82d5fc4f482d6f58824f6cd55d6cfd5c"
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
@@ -26,6 +24,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

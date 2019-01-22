@@ -7,16 +7,14 @@ path="res://.import/Mizuni_Sprites.png-cdfcaadeefc29714f8d54a0dd6d1e55b.stex"
 [deps]
 
 source_file="res://Resources/Textures/Mizuni_Sprites.png"
-source_md5="35ddf03f41d750e838c517619f145d4c"
-
 dest_files=[ "res://.import/Mizuni_Sprites.png-cdfcaadeefc29714f8d54a0dd6d1e55b.stex" ]
-dest_md5="8263ee4ebf856986f415ba726edd8826"
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=false
@@ -26,6 +24,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

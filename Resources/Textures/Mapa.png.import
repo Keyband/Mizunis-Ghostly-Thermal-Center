@@ -7,16 +7,14 @@ path="res://.import/Mapa.png-a81d6f0228878f7f0f0dcd5cb0e31665.stex"
 [deps]
 
 source_file="res://Resources/Textures/Mapa.png"
-source_md5="22475b36442b51320a0e71c74f86a9e1"
-
 dest_files=[ "res://.import/Mapa.png-a81d6f0228878f7f0f0dcd5cb0e31665.stex" ]
-dest_md5="93b2d6fda5bf1fc3179b3f96313eec0d"
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=false
@@ -26,6 +24,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

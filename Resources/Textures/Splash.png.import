@@ -7,16 +7,14 @@ path="res://.import/Splash.png-0d13450870c8eb0f02e03367e8054ab5.stex"
 [deps]
 
 source_file="res://Resources/Textures/Splash.png"
-source_md5="a425352225942c28d88034d08c7f80c6"
-
 dest_files=[ "res://.import/Splash.png-0d13450870c8eb0f02e03367e8054ab5.stex" ]
-dest_md5="ad540260f4719a517b333ab2b3b2ed11"
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
@@ -26,6 +24,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

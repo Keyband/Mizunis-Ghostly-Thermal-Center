@@ -7,10 +7,7 @@ path="res://.import/an_explosion_i_guess1.wav-0dc7bab5ad9a0c77358ac936ef868ef0.s
 [deps]
 
 source_file="res://Resources/SFX/an_explosion_i_guess1.wav"
-source_md5="bc0135dbaa8ffa0daa165627689ebc05"
-
 dest_files=[ "res://.import/an_explosion_i_guess1.wav-0dc7bab5ad9a0c77358ac936ef868ef0.sample" ]
-dest_md5="c95d6ae21ee3ba872da836b5c86636c0"
 
 [params]
 

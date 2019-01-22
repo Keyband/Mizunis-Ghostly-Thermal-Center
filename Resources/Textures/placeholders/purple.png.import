@@ -7,16 +7,14 @@ path="res://.import/purple.png-a2a561b026d106342fc37619b6d612f4.stex"
 [deps]
 
 source_file="res://Resources/Textures/placeholders/purple.png"
-source_md5="9dfe2b13fb260ff1fcac9ba66b1748f9"
-
 dest_files=[ "res://.import/purple.png-a2a561b026d106342fc37619b6d612f4.stex" ]
-dest_md5="2fe7d6fcdaa92215dbdf22a9858371fa"
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
@@ -26,6 +24,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

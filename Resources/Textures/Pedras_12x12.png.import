@@ -7,16 +7,14 @@ path="res://.import/Pedras_12x12.png-7f7828a5c2e17305a1d1ebacbba6f283.stex"
 [deps]
 
 source_file="res://Resources/Textures/Pedras_12x12.png"
-source_md5="033a0c0d0c69612ae70dfa201b75e582"
-
 dest_files=[ "res://.import/Pedras_12x12.png-7f7828a5c2e17305a1d1ebacbba6f283.stex" ]
-dest_md5="814be805bed794445ccc5e192e2d8346"
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=false
@@ -26,6 +24,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

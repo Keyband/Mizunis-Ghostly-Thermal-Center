@@ -7,16 +7,14 @@ path="res://.import/light.png-a21f0cc97edeaa28f59b66ff74dceb47.stex"
 [deps]
 
 source_file="res://Resources/Textures/placeholders/light.png"
-source_md5="b082f554616c07680ed500aba3353eda"
-
 dest_files=[ "res://.import/light.png-a21f0cc97edeaa28f59b66ff74dceb47.stex" ]
-dest_md5="14d18f9f2cd92901fb56a566120d156e"
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
@@ -26,6 +24,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

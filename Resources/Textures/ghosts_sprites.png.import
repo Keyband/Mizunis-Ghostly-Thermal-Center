@@ -7,16 +7,14 @@ path="res://.import/ghosts_sprites.png-588e1808e55bedb58f0beb1e9825946c.stex"
 [deps]
 
 source_file="res://Resources/Textures/ghosts_sprites.png"
-source_md5="558575f4a8e78e715d9311b392ce018f"
-
 dest_files=[ "res://.import/ghosts_sprites.png-588e1808e55bedb58f0beb1e9825946c.stex" ]
-dest_md5="b84fb5eb904ae412f5042af24d223cbe"
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=false
@@ -26,6 +24,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

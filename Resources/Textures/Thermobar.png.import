@@ -7,16 +7,14 @@ path="res://.import/Thermobar.png-4c7a96b65fe818b13fa1c72ffefb25d9.stex"
 [deps]
 
 source_file="res://Resources/Textures/Thermobar.png"
-source_md5="8ac3e06d923f94e6d7caab673c1d4429"
-
 dest_files=[ "res://.import/Thermobar.png-4c7a96b65fe818b13fa1c72ffefb25d9.stex" ]
-dest_md5="caa43b9f513f68ba234d8805e0f9f76b"
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=false
@@ -26,6 +24,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

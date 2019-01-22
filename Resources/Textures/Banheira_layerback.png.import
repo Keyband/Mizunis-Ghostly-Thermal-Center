@@ -7,16 +7,14 @@ path="res://.import/Banheira_layerback.png-25e8bddeb5a0706fd8a79f3e46108ebf.stex
 [deps]
 
 source_file="res://Resources/Textures/Banheira_layerback.png"
-source_md5="aa4b153e195fb832a9a814cd48f098ec"
-
 dest_files=[ "res://.import/Banheira_layerback.png-25e8bddeb5a0706fd8a79f3e46108ebf.stex" ]
-dest_md5="e37bf3da6cad63ef747ab16517e9090c"
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=false
@@ -26,6 +24,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

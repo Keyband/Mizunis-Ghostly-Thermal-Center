@@ -7,16 +7,14 @@ path="res://.import/pink.png-1028f261548c00dd8f0734ec6681a1a0.stex"
 [deps]
 
 source_file="res://Resources/Textures/placeholders/pink.png"
-source_md5="eb32ce898fb642b77b6f6d07ec53137b"
-
 dest_files=[ "res://.import/pink.png-1028f261548c00dd8f0734ec6681a1a0.stex" ]
-dest_md5="43e334a8c060f37a384c64e8aa67a667"
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
@@ -26,6 +24,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

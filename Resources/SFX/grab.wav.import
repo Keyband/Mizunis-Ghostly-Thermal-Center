@@ -7,10 +7,7 @@ path="res://.import/grab.wav-069e52721d2941973264b72f5e971009.sample"
 [deps]
 
 source_file="res://Resources/SFX/grab.wav"
-source_md5="aee45fd8517f928732c28b26a7536279"
-
 dest_files=[ "res://.import/grab.wav-069e52721d2941973264b72f5e971009.sample" ]
-dest_md5="e971da516311f6ac5782319b2d18998b"
 
 [params]
 

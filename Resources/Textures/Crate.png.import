@@ -7,16 +7,14 @@ path="res://.import/Crate.png-8d29db5facb86d2a0bc0939eee864e10.stex"
 [deps]
 
 source_file="res://Resources/Textures/Crate.png"
-source_md5="e9f7e02c973e21c61544e1eee1684561"
-
 dest_files=[ "res://.import/Crate.png-8d29db5facb86d2a0bc0939eee864e10.stex" ]
-dest_md5="ec256941229366e539bf84795d8fcd22"
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=false
@@ -26,6 +24,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

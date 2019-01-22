@@ -7,16 +7,14 @@ path="res://.import/BalaoCliente_29x21.png-8d56778ebc7d1e3735027995031ff43a.stex
 [deps]
 
 source_file="res://Resources/Textures/BalaoCliente_29x21.png"
-source_md5="25450942f416cb66b597cb2485bc52bc"
-
 dest_files=[ "res://.import/BalaoCliente_29x21.png-8d56778ebc7d1e3735027995031ff43a.stex" ]
-dest_md5="2492bda322da1033ee83528c68f5a148"
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
@@ -26,6 +24,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

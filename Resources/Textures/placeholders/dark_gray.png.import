@@ -7,16 +7,14 @@ path="res://.import/dark_gray.png-b86c77308024e4163ff8883e9cef002a.stex"
 [deps]
 
 source_file="res://Resources/Textures/placeholders/dark_gray.png"
-source_md5="b3247fdfd0c2e3497d33fc4252f21c57"
-
 dest_files=[ "res://.import/dark_gray.png-b86c77308024e4163ff8883e9cef002a.stex" ]
-dest_md5="1653ccd278e9b005259808cf41a0a9f2"
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
@@ -26,6 +24,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

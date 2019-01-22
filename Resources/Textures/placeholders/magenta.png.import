@@ -7,16 +7,14 @@ path="res://.import/magenta.png-ca102270a6d9942447b570cc602b1e2e.stex"
 [deps]
 
 source_file="res://Resources/Textures/placeholders/magenta.png"
-source_md5="215736d602d3804ed86c53191c2b5b8d"
-
 dest_files=[ "res://.import/magenta.png-ca102270a6d9942447b570cc602b1e2e.stex" ]
-dest_md5="2645582689a6f03be814eaaacf7d860b"
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
@@ -26,6 +24,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

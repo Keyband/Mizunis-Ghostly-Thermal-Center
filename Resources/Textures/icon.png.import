@@ -7,16 +7,14 @@ path="res://.import/icon.png-f808efefa62078b79a87e50476483f49.stex"
 [deps]
 
 source_file="res://Resources/Textures/icon.png"
-source_md5="df7fbec98888dc4f334e45d60456fbad"
-
 dest_files=[ "res://.import/icon.png-f808efefa62078b79a87e50476483f49.stex" ]
-dest_md5="a0de8d5906a08d0f90fd1b4ec89f9e85"
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=false
@@ -26,6 +24,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true
