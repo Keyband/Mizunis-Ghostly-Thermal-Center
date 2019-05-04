@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://Resources/Textures/Mapa.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/bath_salts1/bath_salts_dispenser1.tscn" type="PackedScene" id=2]
@@ -7,21 +7,16 @@
 [ext_resource path="res://Scenes/room/room.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/window/window.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/climate/climate_manager.gd" type="Script" id=7]
-[ext_resource path="res://Scenes/player/player.gd" type="Script" id=8]
-[ext_resource path="res://Resources/SFX/jump1.wav" type="AudioStream" id=9]
-[ext_resource path="res://Resources/SFX/jump3.wav" type="AudioStream" id=10]
-[ext_resource path="res://Resources/SFX/grab.wav" type="AudioStream" id=11]
-[ext_resource path="res://Resources/SFX/throw.wav" type="AudioStream" id=12]
-[ext_resource path="res://Resources/Textures/Mizuni_Sprites.png" type="Texture" id=13]
-[ext_resource path="res://Scenes/coal/coal.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Scenes/ice/ice.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Resources/Panels/request.tres" type="StyleBox" id=16]
-[ext_resource path="res://Resources/Fonts/96.tres" type="DynamicFont" id=17]
-[ext_resource path="res://Resources/Textures/HUD.png" type="Texture" id=18]
-[ext_resource path="res://Resources/Textures/BarraHUD.png" type="Texture" id=19]
-[ext_resource path="res://Resources/Textures/Seta.png" type="Texture" id=20]
-[ext_resource path="res://Resources/Textures/Menu1.png" type="Texture" id=21]
-[ext_resource path="res://Resources/Textures/Menu2.png" type="Texture" id=22]
+[ext_resource path="res://Scenes/player/player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/coal/coal.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/ice/ice.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Resources/Panels/request.tres" type="StyleBox" id=11]
+[ext_resource path="res://Resources/Fonts/96.tres" type="DynamicFont" id=12]
+[ext_resource path="res://Resources/Textures/HUD.png" type="Texture" id=13]
+[ext_resource path="res://Resources/Textures/BarraHUD.png" type="Texture" id=14]
+[ext_resource path="res://Resources/Textures/Seta.png" type="Texture" id=15]
+[ext_resource path="res://Resources/Textures/Menu1.png" type="Texture" id=16]
+[ext_resource path="res://Resources/Textures/Menu2.png" type="Texture" id=17]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -149,87 +144,14 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 73, 0, 0, 0, 0, 0, 0, 0 )
 }
 
-[sub_resource type="Animation" id=9]
-
-length = 0.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("sprites/mizuni:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 8 ]
-}
-
-[sub_resource type="Animation" id=10]
-
-length = 0.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("sprites/mizuni:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 7 ]
-}
-
-[sub_resource type="Animation" id=11]
-
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("sprites/mizuni:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ 0, 1 ]
-}
-
-[sub_resource type="Animation" id=12]
-
-length = 0.5
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("sprites/mizuni:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 6, 5, 4, 3, 2 ]
-}
-
-[sub_resource type="RectangleShape2D" id=13]
-
-extents = Vector2( 11.6667, 9.94706 )
-
-[sub_resource type="RectangleShape2D" id=14]
-
-extents = Vector2( 5, 14 )
-
-[sub_resource type="GDScript" id=15]
+[sub_resource type="GDScript" id=9]
 
 script/source = "extends CanvasLayer
 
 var id = self
 func _ready(): global.gui_layer = id"
 
-[sub_resource type="GDScript" id=16]
+[sub_resource type="GDScript" id=10]
 
 script/source = "extends Control
 
@@ -253,7 +175,7 @@ func _process(delta):
 		$twn_pause.interpolate_property(self, 'rect_global_position:y', self.rect_global_position.y, target_y, 0.5, Tween.TRANS_BACK, easing)
 		$twn_pause.start()"
 
-[sub_resource type="GDScript" id=17]
+[sub_resource type="GDScript" id=11]
 
 script/source = "extends Node2D
 
@@ -263,20 +185,20 @@ func _process(delta):
 	self.modulate = Color((100 - global.reputation)/100.0, 0.2 + global.reputation/100.0, 0.8)
 "
 
-[sub_resource type="Curve2D" id=18]
+[sub_resource type="Curve2D" id=12]
 
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 488.531, 302.097, 0, 0, 0, 0, 406.428, 302.097 )
 }
 
-[sub_resource type="GDScript" id=19]
+[sub_resource type="GDScript" id=13]
 
 script/source = "extends Path2D
 
 func _ready(): set_process(true)
 func _process(delta): $path_follow_2d.unit_offset = lerp($path_follow_2d.unit_offset, global.climate_temperature/global.maximum_temperature - 0.01, 0.02)"
 
-[sub_resource type="GDScript" id=20]
+[sub_resource type="GDScript" id=14]
 
 script/source = "extends Node2D
 
@@ -287,9 +209,9 @@ func _ready():
 	
 func _process(delta):
 	if Input.is_action_just_pressed('ui_accept'):
-		print('sdasasd')
 		$twn.interpolate_property(self, 'global_position:y', self.global_position.y, -320, 1.0, Tween.TRANS_QUINT, Tween.EASE_IN, 0.25)
 		$twn.start()
+		self.set_process(false)
 
 func _on_twn_tween_completed(object, key):
 	get_parent().get_node('pause').pause_mode = Node.PAUSE_MODE_PROCESS
@@ -298,7 +220,7 @@ func _on_twn_tween_completed(object, key):
 	yield(get_tree().create_timer(1.0), 'timeout')
 	self.queue_free()"
 
-[sub_resource type="GDScript" id=21]
+[sub_resource type="GDScript" id=15]
 
 script/source = "extends TextureRect
 
@@ -411,7 +333,6 @@ hframes = 2
 frame = 1
 
 [node name="rooms" type="Node2D" parent="Control/stage"]
-editor/display_folded = true
 
 [node name="1" parent="Control/stage/rooms" instance=ExtResource( 5 )]
 
@@ -419,7 +340,7 @@ editor/display_folded = true
 editor/display_folded = true
 position = Vector2( 32, 262 )
 
-[node name="tmr_next" parent="Control/stage/rooms/2" index="4"]
+[node name="tmr_next" parent="Control/stage/rooms/2" index="5"]
 wait_time = 15.0
 
 [node name="3" parent="Control/stage/rooms" instance=ExtResource( 5 )]
@@ -427,23 +348,23 @@ editor/display_folded = true
 position = Vector2( 463, 262 )
 script = SubResource( 7 )
 
-[node name="sprite" parent="Control/stage/rooms/3" index="2"]
+[node name="sprite" parent="Control/stage/rooms/3" index="3"]
 flip_h = true
 
-[node name="collision_shape_2d" parent="Control/stage/rooms/3" index="3"]
+[node name="collision_shape_2d" parent="Control/stage/rooms/3" index="4"]
 position = Vector2( 0, 2 )
 
-[node name="tmr_next" parent="Control/stage/rooms/3" index="4"]
+[node name="tmr_next" parent="Control/stage/rooms/3" index="5"]
 wait_time = 30.0
 
-[node name="path_2d" parent="Control/stage/rooms/3" index="6"]
+[node name="path_2d" parent="Control/stage/rooms/3" index="7"]
 position = Vector2( -74, -11 )
 curve = SubResource( 8 )
 
 [node name="path_follow_2d" parent="Control/stage/rooms/3/path_2d" index="0"]
 position = Vector2( 73, 0 )
 
-[node name="ofuro" parent="Control/stage/rooms/3" index="7"]
+[node name="ofuro" parent="Control/stage/rooms/3" index="8"]
 position = Vector2( -74, 4 )
 
 [node name="4" parent="Control/stage/rooms" instance=ExtResource( 5 )]
@@ -451,23 +372,23 @@ editor/display_folded = true
 position = Vector2( 463, 75 )
 script = SubResource( 7 )
 
-[node name="sprite" parent="Control/stage/rooms/4" index="2"]
+[node name="sprite" parent="Control/stage/rooms/4" index="3"]
 flip_h = true
 
-[node name="collision_shape_2d" parent="Control/stage/rooms/4" index="3"]
+[node name="collision_shape_2d" parent="Control/stage/rooms/4" index="4"]
 position = Vector2( 0, 2 )
 
-[node name="tmr_next" parent="Control/stage/rooms/4" index="4"]
+[node name="tmr_next" parent="Control/stage/rooms/4" index="5"]
 wait_time = 45.0
 
-[node name="path_2d" parent="Control/stage/rooms/4" index="6"]
+[node name="path_2d" parent="Control/stage/rooms/4" index="7"]
 position = Vector2( -74, -11 )
 curve = SubResource( 8 )
 
 [node name="path_follow_2d" parent="Control/stage/rooms/4/path_2d" index="0"]
 position = Vector2( 73, 0 )
 
-[node name="ofuro" parent="Control/stage/rooms/4" index="7"]
+[node name="ofuro" parent="Control/stage/rooms/4" index="8"]
 position = Vector2( -74, 4 )
 
 [node name="windows" type="Node2D" parent="Control/stage"]
@@ -499,82 +420,29 @@ script = ExtResource( 7 )
 wait_time = 30.0
 autostart = true
 
-[node name="player" type="KinematicBody2D" parent="Control"]
-position = Vector2( 240.618, 119.078 )
-z_index = 7
-script = ExtResource( 8 )
+[node name="player" parent="Control" instance=ExtResource( 8 )]
 
-[node name="animation_player" type="AnimationPlayer" parent="Control/player"]
-autoplay = "walking"
-anims/going_down = SubResource( 9 )
-anims/going_up = SubResource( 10 )
-anims/idle = SubResource( 11 )
-anims/walking = SubResource( 12 )
-
-[node name="twn_gummy" type="Tween" parent="Control/player"]
-
-[node name="sounds" type="Node2D" parent="Control/player"]
-editor/display_folded = true
-
-[node name="snd_jump0" type="AudioStreamPlayer" parent="Control/player/sounds"]
-stream = ExtResource( 9 )
-bus = "sfx"
-
-[node name="snd_jump1" type="AudioStreamPlayer" parent="Control/player/sounds"]
-stream = ExtResource( 10 )
-bus = "sfx"
-
-[node name="snd_grab" type="AudioStreamPlayer" parent="Control/player/sounds"]
-stream = ExtResource( 11 )
-bus = "sfx"
-
-[node name="snd_throw" type="AudioStreamPlayer" parent="Control/player/sounds"]
-stream = ExtResource( 12 )
-bus = "sfx"
-
-[node name="sprites" type="Sprite" parent="Control/player"]
-editor/display_folded = true
-
-[node name="mizuni" type="Sprite" parent="Control/player/sprites"]
-texture = ExtResource( 13 )
-vframes = 2
-hframes = 5
-
-[node name="range_action" type="Area2D" parent="Control/player"]
-position = Vector2( 15, 2 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/player/range_action"]
-position = Vector2( -9.618, 2.922 )
-shape = SubResource( 13 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/player"]
-position = Vector2( -1, 1 )
-shape = SubResource( 14 )
-
-[node name="pos_carry" type="Position2D" parent="Control/player"]
-position = Vector2( 5, 3 )
-
-[node name="coal" parent="Control" instance=ExtResource( 14 )]
+[node name="coal" parent="Control" instance=ExtResource( 9 )]
 position = Vector2( 150.689, 176 )
 
-[node name="coal2" parent="Control" instance=ExtResource( 14 )]
+[node name="coal2" parent="Control" instance=ExtResource( 9 )]
 position = Vector2( 337.939, 176 )
 
-[node name="ice" parent="Control" instance=ExtResource( 15 )]
+[node name="ice" parent="Control" instance=ExtResource( 10 )]
 position = Vector2( 163, 176 )
 
-[node name="ice2" parent="Control" instance=ExtResource( 15 )]
+[node name="ice2" parent="Control" instance=ExtResource( 10 )]
 position = Vector2( 326.499, 176 )
 
 [node name="GUI_layer" type="CanvasLayer" parent="."]
-script = SubResource( 15 )
+script = SubResource( 9 )
 
 [node name="pause" type="Control" parent="GUI_layer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -290.0
 margin_bottom = -290.0
-script = SubResource( 16 )
+script = SubResource( 10 )
 
 [node name="twn_pause" type="Tween" parent="GUI_layer/pause"]
 
@@ -594,7 +462,7 @@ margin_right = 392.0
 margin_bottom = 208.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-custom_styles/panel = ExtResource( 16 )
+custom_styles/panel = ExtResource( 11 )
 
 [node name="ctn_margin" type="MarginContainer" parent="GUI_layer/pause/ctn_margin/ctn_panel"]
 margin_left = 2.0
@@ -615,7 +483,7 @@ margin_bottom = 82.0
 [node name="str_paused" type="Label" parent="GUI_layer/pause/ctn_margin/ctn_panel/ctn_margin/ctn_vbox"]
 margin_right = 260.0
 margin_bottom = 72.0
-custom_fonts/font = ExtResource( 17 )
+custom_fonts/font = ExtResource( 12 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
@@ -626,11 +494,11 @@ text = "Paused"
 
 [node name="sprite" type="Sprite" parent="GUI_layer/hud"]
 position = Vector2( 249, 304 )
-texture = ExtResource( 18 )
+texture = ExtResource( 13 )
 
 [node name="texture_progress" type="Node2D" parent="GUI_layer/hud"]
 position = Vector2( -0.508957, -0.508545 )
-script = SubResource( 17 )
+script = SubResource( 11 )
 
 [node name="bar" type="TextureProgress" parent="GUI_layer/hud/texture_progress"]
 modulate = Color( 0.968627, 0.858824, 0.32549, 1 )
@@ -639,12 +507,12 @@ margin_top = 297.0
 margin_right = 350.0
 margin_bottom = 312.0
 value = 100.0
-texture_progress = ExtResource( 19 )
+texture_progress = ExtResource( 14 )
 
 [node name="path_2d" type="Path2D" parent="GUI_layer/hud"]
 position = Vector2( 1, 9 )
-curve = SubResource( 18 )
-script = SubResource( 19 )
+curve = SubResource( 12 )
+script = SubResource( 13 )
 
 [node name="path_follow_2d" type="PathFollow2D" parent="GUI_layer/hud/path_2d"]
 position = Vector2( 475.157, 302.097 )
@@ -654,7 +522,7 @@ loop = false
 
 [node name="sprite" type="Sprite" parent="GUI_layer/hud/path_2d/path_follow_2d"]
 scale = Vector2( 1, -1 )
-texture = ExtResource( 20 )
+texture = ExtResource( 15 )
 
 [node name="splash" type="Node2D" parent="GUI_layer"]
 pause_mode = 2
@@ -662,7 +530,7 @@ editor/display_folded = true
 visible = false
 position = Vector2( 0.5, 0 )
 scale = Vector2( 1.00125, 1 )
-script = SubResource( 20 )
+script = SubResource( 14 )
 
 [node name="twn" type="Tween" parent="GUI_layer/splash"]
 
@@ -673,13 +541,13 @@ margin_bottom = 40.0
 [node name="1" type="TextureRect" parent="GUI_layer/splash/splash"]
 margin_right = 40.0
 margin_bottom = 40.0
-texture = ExtResource( 21 )
+texture = ExtResource( 16 )
 
 [node name="2" type="TextureRect" parent="GUI_layer/splash/splash"]
 margin_right = 40.0
 margin_bottom = 40.0
-texture = ExtResource( 22 )
-script = SubResource( 21 )
+texture = ExtResource( 17 )
+script = SubResource( 15 )
 
 [node name="tmr_blink" type="Timer" parent="GUI_layer/splash/splash/2"]
 wait_time = 0.5

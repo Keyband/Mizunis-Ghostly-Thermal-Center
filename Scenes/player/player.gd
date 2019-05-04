@@ -29,7 +29,7 @@ func _physics_process(delta):
 	vector_gravity = global.vector_gravity_up if vetor_velocidade.y < 0 else global.vector_gravity_down
 	
 	$sprites/mizuni.flip_h = true if direcao_horizontal < 0 else false
-	$range_action.position.x = -15 if direcao_horizontal < 0 else 15
+	#$range_action.position.x = -15 if direcao_horizontal < 0 else 15
 	$pos_carry.position.x = -5 if direcao_horizontal < 0 else 5
 	
 	var vetor_direcao_do_movimento = Vector2()

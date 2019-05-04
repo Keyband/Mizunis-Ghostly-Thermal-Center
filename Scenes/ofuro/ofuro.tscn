@@ -8,82 +8,47 @@
 
 [sub_resource type="Curve2D" id=1]
 
-bake_interval = 5.0
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -24, 0, 0, 0, 0, 0, 26, 0 )
 }
 
 [sub_resource type="RectangleShape2D" id=2]
 
-custom_solver_bias = 0.0
 extents = Vector2( 36, 16 )
 
 [node name="ofuro" type="Area2D"]
-
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="sprites" type="Sprite" parent="." index="0"]
+[node name="sprites" type="Sprite" parent="."]
 
-[node name="spr_ofuro_back" type="Sprite" parent="sprites" index="0"]
-
+[node name="spr_ofuro_back" type="Sprite" parent="sprites"]
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="spr_ofuro_front" type="Sprite" parent="sprites" index="1"]
-
+[node name="spr_ofuro_front" type="Sprite" parent="sprites"]
 z_index = 5
 texture = ExtResource( 3 )
-_sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="spr_temp_bar" type="Sprite" parent="sprites" index="2"]
-
+[node name="spr_temp_bar" type="Sprite" parent="sprites"]
 position = Vector2( 0, -35 )
 texture = ExtResource( 4 )
 
-[node name="path_2d" type="Path2D" parent="sprites" index="3"]
-
+[node name="path_2d" type="Path2D" parent="sprites"]
 position = Vector2( 0, -27 )
 curve = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="path_follow_2d" type="PathFollow2D" parent="sprites/path_2d" index="0"]
-
+[node name="path_follow_2d" type="PathFollow2D" parent="sprites/path_2d"]
 position = Vector2( -7.69863, 0 )
 offset = 16.3065
-h_offset = 0.0
-v_offset = 0.0
 rotate = false
 cubic_interp = false
 loop = false
-lookahead = 4.0
-_sections_unfolded = [ "Transform" ]
 
-[node name="spr_pointer" type="Sprite" parent="sprites/path_2d/path_follow_2d" index="0"]
-
+[node name="spr_pointer" type="Sprite" parent="sprites/path_2d/path_follow_2d"]
 texture = ExtResource( 5 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="collision_shape_2d" type="CollisionShape2D" parent="." index="1"]
-
+[node name="collision_shape_2d" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
 
-[node name="tmr_new_ghost" type="Timer" parent="." index="2"]
-
-process_mode = 1
-wait_time = 1.0
-one_shot = false
-autostart = false
-
-[node name="pos_request" type="Position2D" parent="." index="3"]
-
+[node name="pos_request" type="Position2D" parent="."]
 position = Vector2( 0, -60 )
-
 

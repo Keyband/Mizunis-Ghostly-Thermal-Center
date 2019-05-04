@@ -26,31 +26,31 @@ var current_request
 var current_ghost
 
 func _ready():
-#	$tmr_next.wait_time = rand_range(2.0, 4.0)
 	$tmr_still.wait_time = rand_range(5, 10)
 	$tmr_next.start()
+	self.modulate=Color('727272')
 	add_to_group('Door')
 	set_process(true)
 
 func _process(delta):
+	$timerBar.value=$tmr_still.time_left
+	$timerBar.max_value=$tmr_still.wait_time
+	
 	if move_to_ofuro:
-		$path_2d/path_follow_2d.unit_offset = lerp($path_2d/path_follow_2d.unit_offset, 0.99, 0.01)
 		if $path_2d/path_follow_2d.unit_offset > 0.95:
-			move_to_ofuro = false
-			$tmr_still.wait_time = rand_range(12.5, 25.0)
+			move_to_ofuro=false
+			$tmr_still.wait_time = rand_range(1.5, 2.0)
 			$tmr_still.start()
 	if move_to_exit:
-		$path_2d/path_follow_2d.unit_offset = lerp($path_2d/path_follow_2d.unit_offset, 0.01, 0.01)
 		if $path_2d/path_follow_2d.unit_offset < 0.05:
 			move_to_exit = false
-			current_ghost.queue_free()
-			current_request.queue_free()
+			current_ghost.fadeAway()
+			current_request.fadeAway()
 			$tmr_next.wait_time = rand_range(5.0, 10.0)
 			$tmr_next.start()
 
 
 func _on_tmr_next_timeout():
-#	print('Cliente')
 	salt_index = randi() % 2
 	temperature_index = randi() % 3
 
@@ -75,6 +75,10 @@ func _on_tmr_next_timeout():
 	$path_2d/path_follow_2d.add_child(j)
 
 	move_to_ofuro = true
+	$twnMovement.interpolate_property($path_2d/path_follow_2d,"unit_offset",0,1,rand_range(2.5,5.0),Tween.TRANS_SINE,Tween.EASE_OUT)
+	$twnMovement.start()
+	$twnGray.interpolate_property(self,"modulate",self.modulate,Color('ffffff'),0.4,Tween.TRANS_CUBIC,Tween.EASE_IN)
+	$twnGray.start()
 
 func _on_tmr_still_timeout():
 	if str($ofuro.state_salt) + str($ofuro.state_temperature) == types_of_request[type_index]:
@@ -84,9 +88,11 @@ func _on_tmr_still_timeout():
 	else:
 		global.reputation -= 20.0
 		current_ghost.dissatisfaction()
-		
-#		if global.reputation < 0.0: global.gameover()
 	
-	$ofuro.state_salt = $ofuro.Empty
-	current_ghost.get_node('sprite').flip_h = false
+#	$ofuro.state_salt = $ofuro.Empty
+	current_ghost.get_node('sprite').flip_h=false
 	move_to_exit = true
+	$twnMovement.interpolate_property($path_2d/path_follow_2d,"unit_offset",1,0,rand_range(2.5,7.5),Tween.TRANS_SINE,Tween.EASE_IN_OUT)
+	$twnMovement.start()
+	$twnGray.interpolate_property(self,"modulate",self.modulate,Color('727272'),0.4,Tween.TRANS_CUBIC,Tween.EASE_IN)
+	$twnGray.start()
